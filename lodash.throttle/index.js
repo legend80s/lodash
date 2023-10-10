@@ -37,9 +37,6 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
-/** Used as a reference to the global object. */
-var root = freeGlobal || freeSelf || Function('return this')();
-
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -71,7 +68,7 @@ var nativeMax = Math.max,
  * // => Logs the number of milliseconds it took for the deferred invocation.
  */
 var now = function() {
-  return root.Date.now();
+  return Date.now();
 };
 
 /**
