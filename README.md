@@ -1,3 +1,11 @@
+# WHY FORK? 
+
+为什么 Fork ？
+
+因为在不支持 global/window 的环境如微信/支付宝小程序无法使用。因为 lodash 使用了 `root` 即 `global/window/self`，比如 [lodash.throttle]([url](https://github.com/lodash/lodash/blob/4.1.1-npm-packages/lodash.throttle/index.js#L74)) 使用 `root.Date.now()` 在在小程序中将报错『Cannot read properties of undefined (reading 'Date')或 Cannot read properties of undefined (reading 'now')』
+
+和官方 lodash 做了哪些变更？见 todo
+
 # lodash
 
 [Site](https://lodash.com/) |
